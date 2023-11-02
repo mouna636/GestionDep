@@ -1,0 +1,36 @@
+<!-- <div *ngIf="state">
+  <app-list-etudiants></app-list-etudiants>
+</div> -->
+
+<section id="services" class="services section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Espace Administrative</h2>
+    </div>
+    <div class="align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+      <div
+        class="icon-box"
+        style="display: flex; align-items: center; justify-content: center"
+      >
+        <button
+          class="btn btn-primary"
+          style="margin-right: 5rem"
+          (click)="showListeEtudiant()"
+        >
+          Gestion des Etudiants
+        </button>
+        <button class="btn btn-success" (click)="showListeEnseignant()">
+          Gestion des Enseignant
+        </button>
+      </div>
+      <div [ngSwitch]="state">
+        <div *ngSwitchCase="true">
+          <app-list-etudiants></app-list-etudiants>
+        </div>
+        <div *ngSwitchCase="false">
+          <app-list-enseignants></app-list-enseignants>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

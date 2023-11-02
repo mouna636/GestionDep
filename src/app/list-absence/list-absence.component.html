@@ -1,0 +1,47 @@
+<!-- <div class="container d-flex align-items-center bg-dark">
+  <app-header></app-header>
+</div> -->
+<section id="services" class="services section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Espace Enseignant</h2>
+      <p>Marqué les etudiants absentes</p>
+    </div>
+
+    <div class="align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+      <div class="icon-box">
+        <!-- <div class="icon"><i class="bx bxl-dribbble"></i></div> -->
+        <!-- <h4><a href="">Lorem Ipsum</a></h4> -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Absence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{ user.id }}</td>
+              <td>{{ user.nom }}</td>
+              <td>{{ user.prenom }}</td>
+              <td>
+                <div class="form-check form-switch">
+                  <input
+                    class="form-check-input toggle-size"
+                    type="checkbox"
+                    name="isAbsent"
+                    id="toggleButton"
+                    ngModel
+                    (change)="setEtudiantAbsent(user.id, $event)"
+                  />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

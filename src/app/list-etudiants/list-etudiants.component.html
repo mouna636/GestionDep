@@ -1,0 +1,44 @@
+<section id="services" class="services section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Liste Etudiants</h2>
+      <!-- <p>Marqué les etudiants absentes</p> -->
+    </div>
+
+    <div class="align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+      <div class="icon-box">
+        <!-- <div class="icon"><i class="bx bxl-dribbble"></i></div> -->
+        <!-- <h4><a href="">Lorem Ipsum</a></h4> -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>CIN</th>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Date de Naissance</th>
+              <th>Nombre d'absences</th>
+              <th>note</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{ user.id }}</td>
+              <td>{{ user.cin }}</td>
+              <td>{{ user.nom }}</td>
+              <td>{{ user.prenom }}</td>
+              <td>{{ user.dateNaissance }}</td>
+              <td>{{ user.numberOfAbsences }}</td>
+              <td>{{ user.note }}</td>
+              <td>
+                <button class="btn btn-primary">Edit</button>&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-danger">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

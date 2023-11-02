@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Enseignant } from '../Models/enseignant';
+import { Enseignant } from '../models/enseignant';
 import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class EnseignantService {
+  getEnseignantById(id: any) {
+    throw new Error('Method not implemented.');
+  }
   enseignantUrl:string ='http://localhost:8080/enseignants'
 
   constructor(private httpClient:HttpClient) {}
