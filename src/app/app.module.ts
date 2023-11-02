@@ -10,6 +10,10 @@ import { ContactComponent } from './contact/contact.component';
 import { SectionComponent } from './section/section.component';
 import { AboutComponent } from './about/about.component';
 import { ServiceComponent } from './service/service.component';
+import { AjoutEtudiantComponent } from './ajout-etudiant/ajout-etudiant.component';
+import { AjoutService } from './ajout-etudiant/ajout-etudiant.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,13 +24,15 @@ import { ServiceComponent } from './service/service.component';
     ContactComponent,
     SectionComponent,
     AboutComponent,
-    ServiceComponent
+    ServiceComponent,
+    AjoutEtudiantComponent
   ],
-  imports: [
+  imports: [FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AjoutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
