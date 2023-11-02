@@ -10,6 +10,12 @@ import { ContactComponent } from './contact/contact.component';
 import { SectionComponent } from './section/section.component';
 import { AboutComponent } from './about/about.component';
 import { ServiceComponent } from './service/service.component';
+import { ListAbsenceComponent } from './list-absence/list-absence.component';
+import { AbsenceService } from './list-absence/absence.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ListEtudiantsComponent } from './list-etudiants/list-etudiants.component';
+import { EspaceAdministrativeComponent } from './espace-administrative/espace-administrative.component';
+import { ListEnseignantsComponent } from './list-enseignants/list-enseignants.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +26,14 @@ import { ServiceComponent } from './service/service.component';
     ContactComponent,
     SectionComponent,
     AboutComponent,
-    ServiceComponent
+    ServiceComponent,
+    ListAbsenceComponent,
+    ListEtudiantsComponent,
+    EspaceAdministrativeComponent,
+    ListEnseignantsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  providers: [AbsenceService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
