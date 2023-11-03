@@ -23,6 +23,7 @@ import { AddEnseignantComponent } from './add-enseignant/add-enseignant.componen
 import { BackButtonComponent } from './back-button/back-button.component';
 import { ModifEnseignantComponent } from './modif-enseignant/modif-enseignant.component';
 import { EspaceEtudiantComponent } from './espace-etudiant/espace-etudiant.component';
+import { EtudEspService } from './espace-etudiant/espEtud.service';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import { EspaceEtudiantComponent } from './espace-etudiant/espace-etudiant.compo
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [AjoutService, AbsenceService],
+  providers: [AjoutService, AbsenceService, EtudEspService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
