@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListEtudiantsComponent } from './list-etudiants/list-etudiants.component';
 import { EspaceAdministrativeComponent } from './espace-administrative/espace-administrative.component';
 import { ListEnseignantsComponent } from './list-enseignants/list-enseignants.component';
+import { EditEnseignantComponent } from './edit-enseignant/EditEnseignantComponent.1';
+import { AddEnseignantComponent } from './add-enseignant/add-enseignant.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { ListEnseignantsComponent } from './list-enseignants/list-enseignants.co
     ListEtudiantsComponent,
     EspaceAdministrativeComponent,
     ListEnseignantsComponent,
+    EditEnseignantComponent,
+    AddEnseignantComponent
   ],
   imports: [FormsModule,
     BrowserModule,

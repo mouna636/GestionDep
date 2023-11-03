@@ -4,9 +4,9 @@
   
             <form #editEnseignantForm='ngForm' (ngSubmit)='editEnseignant()'>
                    <h3> Modifier un enseignant  </h3>
-                <div class="form-group">
-                  <input type="text" class="form-control" [(ngModel)]='enseignant.nom' [ngModelOptions]="{standalone: true}" placeholder="Nom">
-                </div>
+            <div class="form-group">
+                 <input type="text" class="form-control" [(ngModel)]='enseignant.nom' [ngModelOptions]="{standalone: true}" placeholder="Nom">
+            </div>
                
                 <div class="form-group">
                 <input type="text" class="form-control" [(ngModel)]='enseignant.prenom' [ngModelOptions]="{standalone: true}" placeholder="Prenom">
@@ -31,9 +31,8 @@
                </div> 
                <div class="form-group">
                 <input type="text" class="form-control" [(ngModel)]='enseignant.specialite' [ngModelOptions]="{standalone: true}" placeholder="Specialite">
-               </div> 
-                     
-                 <div>
+               </div>     
+                <div>
                 <button type="submit" class="btn btn-primary "> envoyer </button>
                 </div>
                </form>  
