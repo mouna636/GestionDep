@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { EnseignantService } from '../services/enseignant.service';
 import { Router } from '@angular/router';
+import { EnseignantService } from '../services/enseignant.service';
 
 @Component({
-  selector: 'app-listeenseignant',
-  templateUrl: './listeenseignant.component.html',
-  styleUrls: ['./listeenseignant.component.css']
+  selector: 'app-enseignant-table',
+  templateUrl: './enseignant-table.component.html',
+  styleUrls: ['./enseignant-table.component.css']
 })
-export class ListeenseignantComponent implements OnInit{
+export class EnseignantTableComponent implements OnInit{
   enseignants:any;
-  
   constructor(private router:Router,private enseignantService:EnseignantService) {}
-
-
   ngOnInit() {
     this.getEnseignantsFromService();  
   }
@@ -24,15 +21,17 @@ export class ListeenseignantComponent implements OnInit{
   goToEdit(x: any){
     this.router.navigate([`editEnseignant/${x}`])
   }
-  deleteenseignant(id: any){
+  deleteEnseignant(id: any){
     this.enseignantService.deleteEnseignantById(id).subscribe(
       ()=>{
-        console.log('Type deleted successfully');
+        console.log('Enseignant deleted successfully');
       
           this.getEnseignantsFromService();
         
         
       }
     )
-  }
+  } 
 }
+
+
