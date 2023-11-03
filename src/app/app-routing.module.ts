@@ -5,10 +5,11 @@ import { AddEnseignantComponent } from './add-enseignant/add-enseignant.componen
 import { AjoutEtudiantComponent } from './ajout-etudiant/ajout-etudiant.component';
 import { ListAbsenceComponent } from './list-absence/list-absence.component';
 import { EspaceAdministrativeComponent } from './espace-administrative/espace-administrative.component';
-import { ListEnseignantsComponent } from './list-enseignants/list-enseignants.component';
 import { ListEtudiantsComponent } from './list-etudiants/list-etudiants.component';
 import { EnseignantTableComponent } from './enseignant-table/enseignant-table.component';
 import { EditEtudiantComponent } from './edit-etudiant/edit-etudiant.component';
+import { EspaceEtudiantComponent } from './espace-etudiant/espace-etudiant.component';
+import { ModifEnseignantComponent } from './modif-enseignant/modif-enseignant.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +22,8 @@ const routes: Routes = [
   { path: 'editEtudiant/:id', component: EditEtudiantComponent},
   
 
+  { path: 'espaceetudiant', component: EspaceEtudiantComponent },
+  { path: 'modifEnseignant/:id', component: ModifEnseignantComponent },
 ];
 
 @NgModule({

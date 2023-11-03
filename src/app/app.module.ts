@@ -21,8 +21,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { EnseignantTableComponent } from './enseignant-table/enseignant-table.component';
 import { AddEnseignantComponent } from './add-enseignant/add-enseignant.component';
 import { BackButtonComponent } from './back-button/back-button.component';
-import { EditEtudiantComponent } from './edit-etudiant/edit-etudiant.component';
-import { ServiceEtudiantComponent } from './service-etudiant/service-etudiant.component';
 
 @NgModule({
   declarations: [
@@ -43,8 +41,6 @@ import { ServiceEtudiantComponent } from './service-etudiant/service-etudiant.co
     AddEnseignantComponent,
     BackButtonComponent,
     EnseignantTableComponent,
-    EditEtudiantComponent,
-    ServiceEtudiantComponent,
   ],
   imports: [
     FormsModule,

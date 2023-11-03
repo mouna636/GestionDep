@@ -19,7 +19,7 @@ export class EnseignantTableComponent implements OnInit{
     })
   }
   goToEdit(x: any){
-    this.router.navigate([`editEnseignant/${x}`])
+    this.router.navigate([`modifEnseignant/${x}`])
   }
   deleteEnseignant(id: any){
     this.enseignantService.deleteEnseignantById(id).subscribe(
