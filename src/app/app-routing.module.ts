@@ -20,8 +20,6 @@ const routes: Routes = [
   { path: 'administrative', component: EspaceAdministrativeComponent },
   { path: 'list-etudiants', component: ListEtudiantsComponent },
   { path: 'editEtudiant/:id', component: EditEtudiantComponent},
-  
-
   { path: 'espaceetudiant', component: EspaceEtudiantComponent },
   { path: 'modifEnseignant/:id', component: ModifEnseignantComponent },
 ];

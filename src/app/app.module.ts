@@ -21,6 +21,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { EnseignantTableComponent } from './enseignant-table/enseignant-table.component';
 import { AddEnseignantComponent } from './add-enseignant/add-enseignant.component';
 import { BackButtonComponent } from './back-button/back-button.component';
+import { ModifEnseignantComponent } from './modif-enseignant/modif-enseignant.component';
+import { EditEtudiantComponent } from './edit-etudiant/edit-etudiant.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { BackButtonComponent } from './back-button/back-button.component';
     AddEnseignantComponent,
     BackButtonComponent,
     EnseignantTableComponent,
+    ModifEnseignantComponent,
+    EditEtudiantComponent,
   ],
   imports: [
     FormsModule,
