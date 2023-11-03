@@ -33,7 +33,7 @@ export class AddEnseignantComponent implements OnInit {
     console.log (this.enseignant);
     this.enseignantService.saveEnseignant(this.enseignant).subscribe(
       ()=>{
-        this.router.navigate(['listeEnseignant']);
+        this.router.navigate(['enseignant-table']);
       }
     ) 
   } 

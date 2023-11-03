@@ -6,9 +6,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EnseignantService {
-  getEnseignantById(id: any) {
-    throw new Error('Method not implemented.');
-  }
+ 
   enseignantUrl:string ='http://localhost:8080/enseignants'
 
   constructor(private httpClient:HttpClient) {}
@@ -20,7 +18,11 @@ export class EnseignantService {
 saveEnseignant(enseignant:any): Observable<any> {
   return this.httpClient.post(this.enseignantUrl,enseignant);
 }
- updateEnseignant(enseignant:any):Observable<any>{
+getEnseignantById(id:any): Observable<any> {
+  return this.httpClient.get(`${this.enseignantUrl}/${id}`);
+
+}
+ updateEnseignant(enseignant:any):Observable<any> {
   return this.httpClient.put(`${this.enseignantUrl}/${enseignant.id}`,enseignant);
  }
 deleteEnseignantById(id:any):Observable<any>{

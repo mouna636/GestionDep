@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,17 +10,18 @@ import { AboutComponent } from './about/about.component';
 import { ServiceComponent } from './service/service.component';
 import { AjoutEtudiantComponent } from './ajout-etudiant/ajout-etudiant.component';
 import { AjoutService } from './ajout-etudiant/ajout-etudiant.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListAbsenceComponent } from './list-absence/list-absence.component';
 import { AbsenceService } from './list-absence/absence.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ListEtudiantsComponent } from './list-etudiants/list-etudiants.component';
 import { EspaceAdministrativeComponent } from './espace-administrative/espace-administrative.component';
 import { ListEnseignantsComponent } from './list-enseignants/list-enseignants.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { EnseignantTableComponent } from './enseignant-table/enseignant-table.component';
 import { EditEnseignantComponent } from './edit-enseignant/EditEnseignantComponent.1';
 import { AddEnseignantComponent } from './add-enseignant/add-enseignant.component';
 import { BackButtonComponent } from './back-button/back-button.component';
-
 
 @NgModule({
   declarations: [
@@ -31,28 +31,27 @@ import { BackButtonComponent } from './back-button/back-button.component';
     FooterComponent,
     ContactComponent,
     SectionComponent,
+    ListEnseignantsComponent,
     AboutComponent,
     ServiceComponent,
     AjoutEtudiantComponent,
     ListAbsenceComponent,
     ListEtudiantsComponent,
     EspaceAdministrativeComponent,
-    ListEnseignantsComponent,
+    EnseignantTableComponent,
     EditEnseignantComponent,
     AddEnseignantComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    EnseignantTableComponent,
   ],
-  imports: [FormsModule,
+  imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
-  providers: [AjoutService,
-              AbsenceService],
-  bootstrap: [AppComponent]
-   
-  
-  
- 
+  providers: [AjoutService, AbsenceService],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
