@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AbsenceService } from '../list-absence/absence.service';
 import { Etudiant } from '../models/etudiant.model';
 import { EtudEspService } from './espEtud.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-espace-etudiant',
@@ -10,7 +11,7 @@ import { EtudEspService } from './espEtud.service';
 })
 export class EspaceEtudiantComponent {
   users: Etudiant[] = [];
-
+  taux: number = 0;
   constructor(
     private absenceService: AbsenceService,
     private etudesp: EtudEspService
@@ -18,13 +19,14 @@ export class EspaceEtudiantComponent {
 
   ngOnInit(): void {
     this.absenceService.getEtudiants().subscribe((res) => {
+      console.log('Received users:', res);
       this.users = res;
     });
   }
-  getTauxAbsence(id: any): Number {
-    this.etudesp.getNumberOfAbsencesByEtudiantId(id).subscribe((res) => {
-      return res;
-    });
-    return 0;
-  }
+
+  // getTauxAbsence(id: any): Observable<any> {
+  //   let x = this.etudesp.getNumberOfAbsencesByEtudiantId(id);
+  //   console.log(x);
+  //   return x;
+  // }
 }

@@ -8,11 +8,15 @@
     <div class="align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
       <div class="icon-box">
         <!-- <div class="icon"><i class="bx bxl-dribbble"></i></div> -->
-        <h4>
+
+        <h4 style="display: flex; justify-content: space-between">
           <button class="btn btn-danger">
             <a href="ajout-etudiant" style="text-decoration: none; color: white"
               >Ajouter un Etudiant</a
             >
+          </button>
+          <button class="btn btn-outline-danger" style="margin-bottom: 3px">
+            Taux d'absentisme: {{ taux }}
           </button>
         </h4>
         <table class="table table-striped">
@@ -38,7 +42,9 @@
               <td>{{ user.numberOfAbsences }}</td>
               <td>{{ user.note }}</td>
               <td>
-                <button class="btn btn-primary"(click)='goToEdit(user.id)'> Edit</button>&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary" (click)="goToEdit(user.id)">
+                  Edit</button
+                >&nbsp;&nbsp;&nbsp;
                 <button class="btn btn-danger">Delete</button>
               </td>
             </tr>

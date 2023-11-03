@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EtudEspService } from '../espace-etudiant/espEtud.service';
 
 @Component({
   selector: 'app-espace-administrative',

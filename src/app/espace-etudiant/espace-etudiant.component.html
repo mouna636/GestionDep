@@ -2,7 +2,6 @@
   <div class="container" data-aos="fade-up">
     <div class="section-title">
       <h2>Espace Etudiant</h2>
-      <!-- <p>Marqué les etudiants absentes</p> -->
     </div>
 
     <div class="row">
@@ -17,7 +16,7 @@
           <h4>
             <a href="">{{ user.nom + " " + user.prenom }}</a>
           </h4>
-          <p>{{ getTauxAbsence(user.id) }}</p>
+          <p>{{ user.numberOfAbsences }}</p>
         </div>
       </div>
     </div>
