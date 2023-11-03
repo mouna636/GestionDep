@@ -27,7 +27,7 @@ export class ListAbsenceComponent implements OnInit {
         console.log(res);
       });
     } else if (!(event.target as HTMLInputElement).checked) {
-      this.absenceService.setEtudiantAbsent(id).subscribe((res) => {
+      this.absenceService.setEtudiantNotAbsent(id).subscribe((res) => {
         console.log(res);
       });
     }
