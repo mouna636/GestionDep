@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { EnseignantService } from '../services/enseignant.service';
+import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-
-
+import { EnseignantService } from '../services/enseignant.service';
 
 @Component({
-  selector: 'app-edit-enseignant',
-  templateUrl: './edit-enseignant.component.html',
-  styleUrls: ['./edit-enseignant.component.css']
+  selector: 'app-modif-enseignant',
+  templateUrl: './modif-enseignant.component.html',
+  styleUrls: ['./modif-enseignant.component.css']
 })
-export class EditEnseignantComponent implements OnInit {
+export class ModifEnseignantComponent  implements OnInit {
   editEnseignantForm:any;
   id: any;
   enseignant: any = {};
@@ -26,14 +24,17 @@ export class EditEnseignantComponent implements OnInit {
         this.enseignant=data;
       }
     )
+    
   }
 
-  editEnseignant() {
-    this.enseignantService.updateEnseignant(this.enseignant).subscribe(
+  modifEnseignant() {
+   this.enseignantService.updateEnseignant(this.enseignant).subscribe(
       () => {
         this.router.navigate(['enseignant-table']);
       }
-    );
+    ); 
+
 
   }
+
 }
