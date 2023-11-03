@@ -1,41 +1,53 @@
+<section id="services" class="services section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Ajouter un enseignant</h2>
+      <!-- <p>Marqué les etudiants absentes</p> -->
+    </div>
 
-<div class="wrapper">
-    <div class="inner">
+    <div class="align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+      <div class="icon-box">
   
             <form #addEnseignantForm='ngForm' (ngSubmit)='saveEnseignant()'>
-                   <h3>Ajouter un enseignant  </h3>
                 <div class="form-group">
                   <input type="text" class="form-control" [(ngModel)]='enseignant.nom' [ngModelOptions]="{standalone: true}" placeholder="Nom">
                 </div>
-               
+               <br>               
                 <div class="form-group">
                 <input type="text" class="form-control" [(ngModel)]='enseignant.prenom' [ngModelOptions]="{standalone: true}" placeholder="Prenom">
               </div>
-              
+              <br> 
               <div class="form-group">
                 <input type="text" class="form-control" [(ngModel)]='enseignant.email' [ngModelOptions]="{standalone: true}" placeholder="Email">
               </div>
-              
+              <br> 
               <div class="form-group">
                 <input type="text" class="form-control" [(ngModel)]='enseignant.telephone' [ngModelOptions]="{standalone: true}" placeholder="Telephone">
                </div>
+               <br> 
                <div class="form-group">
                 <input type="text" class="form-control" [(ngModel)]='enseignant.adresse' [ngModelOptions]="{standalone: true}" placeholder="Adresse">
                </div>
-              
+               <br> 
                <div class="form-group">
                 <input type="text" class="form-control" [(ngModel)]='enseignant.sexe' [ngModelOptions]="{standalone: true}" placeholder="Sexe">
                </div>
+               <br> 
                <div class="form-group">
                 <input type="text" class="form-control" [(ngModel)]='enseignant.grade' [ngModelOptions]="{standalone: true}" placeholder="Grade">
                </div> 
+               <br> 
                <div class="form-group">
                 <input type="text" class="form-control" [(ngModel)]='enseignant.specialite' [ngModelOptions]="{standalone: true}" placeholder="Specialite">
                </div> 
-                     
+               <br>   
                  <div>
                 <button type="submit" class="btn btn-primary "> envoyer </button>
                 </div>
+              
                </form>  
+              </div>
+        
+            </div>
           </div>
-        </div>
+        </section>
