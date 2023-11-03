@@ -17,14 +17,18 @@ export class ListEtudiantsComponent {
     private etudesp: EtudEspService,
     private router: Router
   ) {}
-  taux: number = 0;
+  tauxAbsentisme: number = 0;
+  tauxReussite: number = 0;
 
   ngOnInit(): void {
     this.absenceService.getEtudiants().subscribe((res) => {
       this.users = res;
     });
-    this.etudesp.getTaux().subscribe((res: any) => {
-      this.taux = res;
+    this.etudesp.getTauxAbsentisme().subscribe((res: any) => {
+      this.tauxAbsentisme = res;
+    });
+    this.etudesp.getTauxReussite().subscribe((res: any) => {
+      this.tauxReussite = res;
     });
   }
 

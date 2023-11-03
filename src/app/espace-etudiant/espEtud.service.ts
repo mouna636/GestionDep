@@ -11,7 +11,10 @@ export class EtudEspService {
   getNumberOfAbsencesByEtudiantId(id: number): any {
     return this.http.get(`${this.host}/etudiants/etudiant/${id}/absences`);
   }
-  getTaux(): any {
+  getTauxAbsentisme(): any {
     return this.http.get(`${this.host}/etudiants/taux-absentisme`);
+  }
+  getTauxReussite(): any {
+    return this.http.get(`${this.host}/etudiants/taux-reussite`);
   }
 }
