@@ -1,46 +1,61 @@
  
-<h1>Ajouter un etudiant</h1>
-<body>
-    <form class="form-group" (ngSubmit)="ajouterEtudiant()"> 
-        <label> 
-            Nom : </label>
-            <input class="form-control" type="text" [(ngModel)]='etudiant.nom' name="nom"  required> <br>
-        <label>
-            Prenom : </label>
-            <input class="form-control" type="text" [(ngModel)]='etudiant.prenom' name="prenom"   required > <br>
-        <!-- <label>
-            sexe : </label>
-            <input class="form-control" type="text" [(ngModel)]='etudiant.sexe' name="sexe"    required> <br> -->
-        <label>
-            Date de naissance : </label>
-            <input class="form-control" type="date" [(ngModel)]='etudiant.dateNaissance' name="dateNaissance"   required> <br>
-        <label>
-            cin : </label>
-            <input class="form-control" type="text" [(ngModel)]='etudiant.Cin' name="Cin"   required> <br>
-        <!-- <label>
-            Email : </label>
-            <input class="form-control" type="email" [(ngModel)]='etudiant.email' name="email"   required> <br>
-        <label>
-            Telephone : </label>
-            <input class="form-control" type="text" [(ngModel)]='etudiant.telephone' name="telephone"   required> <br>
-        <label>
-            Adresse : </label>
-            <input class="form-control" type="text" [(ngModel)]='etudiant.adresse' name="adresse"   required> <br>
-        <label>
-            pays : </label>
-            <input class="form-control" type="text" [(ngModel)]='etudiant.pays' name="pays"  required> <br>
-
-        <label> 
-            ville : </label>
-            <input class="form-control" type="text" [(ngModel)]='etudiant.ville' name="ville"   required> <br>
-        <label>
-            codePostal : </label>
-            <input class="form-control" type="text" [(ngModel)]='etudiant.codepostal' name="codePostal"   required> <br>
-         -->
-        
-        <button type="submit">Ajouter</button>
-
-            </form>
-</body>
-
+<section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Liste Etudiants</h2>
+        <!-- <p>Marqué les etudiants absentes</p> -->
+      </div>
+  
+      <div class="align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box">
+          <!-- <div class="icon"><i class="bx bxl-dribbble"></i></div> -->
+          <!-- <h4><a href="">Lorem Ipsum</a></h4> -->
+          <form class="form-group" (ngSubmit)="ajouterEtudiant()"> 
+            <label> 
+                Nom : </label>
+                <input class="form-control" type="text" [(ngModel)]='etudiant.nom' name="nom"  required> <br>
+            <label>
+                Prenom : </label>
+                <input class="form-control" type="text" [(ngModel)]='etudiant.prenom' name="prenom"   required > <br>
+            <!-- <label>
+                sexe : </label>
+                <input class="form-control" type="text" [(ngModel)]='etudiant.sexe' name="sexe"    required> <br> -->
+            <label>
+                Date de naissance : </label>
+                <input class="form-control" type="date" [(ngModel)]='etudiant.dateNaissance' name="dateNaissance"   required> <br>
+            <label>
+                cin : </label>
+                <input class="form-control" type="text" [(ngModel)]='etudiant.Cin' name="Cin"   required> <br>
+            <!-- <label>
+                Email : </label>
+                <input class="form-control" type="email" [(ngModel)]='etudiant.email' name="email"   required> <br>
+            <label>
+                Telephone : </label>
+                <input class="form-control" type="text" [(ngModel)]='etudiant.telephone' name="telephone"   required> <br>
+            <label>
+                Adresse : </label>
+                <input class="form-control" type="text" [(ngModel)]='etudiant.adresse' name="adresse"   required> <br>
+            <label>
+                pays : </label>
+                <input class="form-control" type="text" [(ngModel)]='etudiant.pays' name="pays"  required> <br>
     
+            <label> 
+                ville : </label>
+                <input class="form-control" type="text" [(ngModel)]='etudiant.ville' name="ville"   required> <br>
+            <label>
+                codePostal : </label>
+                <input class="form-control" type="text" [(ngModel)]='etudiant.codepostal' name="codePostal"   required> <br>
+             -->
+            
+            <button type="submit">Ajouter</button>
+    
+                </form>
+    
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+
+
