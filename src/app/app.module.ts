@@ -19,9 +19,10 @@ import { EspaceAdministrativeComponent } from './espace-administrative/espace-ad
 import { ListEnseignantsComponent } from './list-enseignants/list-enseignants.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { EnseignantTableComponent } from './enseignant-table/enseignant-table.component';
-import { EditEnseignantComponent } from './edit-enseignant/EditEnseignantComponent.1';
 import { AddEnseignantComponent } from './add-enseignant/add-enseignant.component';
 import { BackButtonComponent } from './back-button/back-button.component';
+import { EditEtudiantComponent } from './edit-etudiant/edit-etudiant.component';
+import { ServiceEtudiantComponent } from './service-etudiant/service-etudiant.component';
 
 @NgModule({
   declarations: [
@@ -39,10 +40,11 @@ import { BackButtonComponent } from './back-button/back-button.component';
     ListEtudiantsComponent,
     EspaceAdministrativeComponent,
     EnseignantTableComponent,
-    EditEnseignantComponent,
     AddEnseignantComponent,
     BackButtonComponent,
     EnseignantTableComponent,
+    EditEtudiantComponent,
+    ServiceEtudiantComponent,
   ],
   imports: [
     FormsModule,

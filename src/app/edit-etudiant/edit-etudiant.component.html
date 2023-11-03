@@ -1,0 +1,45 @@
+<div class="wrapper">
+    <div class="inner">
+  
+            <form #editEtudiantForm='ngForm' (ngSubmit)='editEtudiant()'>
+                   <h3> Modifier un etudiant  </h3>
+
+
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]='etudiant.Cin' [ngModelOptions]="{standalone: true}" placeholder="CIN">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]='etudiant.nom' [ngModelOptions]="{standalone: true}" placeholder="Nom">
+            </div>
+               
+                <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]='etudiant.prenom' [ngModelOptions]="{standalone: true}" placeholder="Prénom">
+              </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]='etudiant.dateNaissance' [ngModelOptions]="{standalone: true}" placeholder="Date de Naissance">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]='etudiant.numberOfAbsences' [ngModelOptions]="{standalone: true}" placeholder="Nombre d'absences">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]='etudiant.note' [ngModelOptions]="{standalone: true}" placeholder="Note">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary "> envoyer </button>
+                </div>
+               </form>  
+          </div>
+        </div>
+
+        
+
+
+
+
+
+
+        
