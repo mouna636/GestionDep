@@ -23,6 +23,8 @@ import { AddEnseignantComponent } from './add-enseignant/add-enseignant.componen
 import { BackButtonComponent } from './back-button/back-button.component';
 import { ModifEnseignantComponent } from './modif-enseignant/modif-enseignant.component';
 import { EditEtudiantComponent } from './edit-etudiant/edit-etudiant.component';
+import { EspaceEtudiantComponent } from './espace-etudiant/espace-etudiant.component';
+
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { EditEtudiantComponent } from './edit-etudiant/edit-etudiant.component';
     EnseignantTableComponent,
     ModifEnseignantComponent,
     EditEtudiantComponent,
+    EspaceEtudiantComponent,
   ],
   imports: [
     FormsModule,
