@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AjoutService } from './ajout-etudiant.service';
 import { Etudiant } from '../models/etudiant.model';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 
@@ -32,14 +33,15 @@ export class AjoutEtudiantComponent {
     pays: ""*/
   };
 
-  constructor(private ajoutService: AjoutService) { }
+  constructor(private ajoutService: AjoutService, private activatedRoute:ActivatedRoute,
+    private router: Router) { }
 
   ajouterEtudiant() {
-    const newEtudiant = { ...this.etudiant }; // Copy the student data
-    console.log(newEtudiant); // Log to check the data before sending
+    const newEtudiant = { ...this.etudiant }; 
+    console.log(newEtudiant); 
     this.ajoutService.addEtudiant(newEtudiant).subscribe((data) => {
-      console.log(data); // Log the response from the service
-      // Additional actions upon successful addition can be done here
+      console.log(data); 
+      this.router.navigate(['list-etudiants']);
     });
   }
 
