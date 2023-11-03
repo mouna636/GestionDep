@@ -9,6 +9,7 @@ import { ListEnseignantsComponent } from './list-enseignants/list-enseignants.co
 import { ListEtudiantsComponent } from './list-etudiants/list-etudiants.component';
 import { EnseignantTableComponent } from './enseignant-table/enseignant-table.component';
 import { EspaceEtudiantComponent } from './espace-etudiant/espace-etudiant.component';
+import { ModifEnseignantComponent } from './modif-enseignant/modif-enseignant.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'list-etudiants', component: ListEtudiantsComponent },
 
   { path: 'espaceetudiant', component: EspaceEtudiantComponent },
+  { path: 'modifEnseignant/:id', component: ModifEnseignantComponent },
 ];
 
 @NgModule({
