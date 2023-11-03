@@ -44,8 +44,6 @@ import { EtudEspService } from './espace-etudiant/espEtud.service';
     AddEnseignantComponent,
     BackButtonComponent,
     EnseignantTableComponent,
-    EspaceEtudiantComponent,
-    ModifEnseignantComponent,
   ],
   imports: [
     FormsModule,
