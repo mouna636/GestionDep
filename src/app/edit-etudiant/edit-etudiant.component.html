@@ -1,56 +1,77 @@
 <section id="services" class="services section-bg">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2>Modifier etudiant</h2>
-        <<app-back-button></app-back-button>
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Modifier etudiant</h2>
+      <app-back-button></app-back-button>
+    </div>
+
+    <div class="align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+      <div class="icon-box">
+        <form #editEtudiantForm="ngForm" (ngSubmit)="editEtudiant()">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="etudiant.cin"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="CIN"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="etudiant.nom"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Nom"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="etudiant.prenom"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Prénom"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="etudiant.dateNaissance"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Date de Naissance"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="etudiant.numberOfAbsences"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Nombre d'absences"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="etudiant.note"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Note"
+            />
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primary">envoyer</button>
+          </div>
+        </form>
       </div>
-  
-      <div class="align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-        <div class="icon-box">
-  
-            <form #editEtudiantForm='ngForm' (ngSubmit)='editEtudiant()'>
-                   <h3> Modifier un etudiant  </h3>
-
-
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]='etudiant.Cin' [ngModelOptions]="{standalone: true}" placeholder="CIN">
-            </div>
-
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]='etudiant.nom' [ngModelOptions]="{standalone: true}" placeholder="Nom">
-            </div>
-               
-                <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]='etudiant.prenom' [ngModelOptions]="{standalone: true}" placeholder="Prénom">
-              </div>
-
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]='etudiant.dateNaissance' [ngModelOptions]="{standalone: true}" placeholder="Date de Naissance">
-            </div>
-
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]='etudiant.numberOfAbsences' [ngModelOptions]="{standalone: true}" placeholder="Nombre d'absences">
-            </div>
-
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]='etudiant.note' [ngModelOptions]="{standalone: true}" placeholder="Note">
-            </div>
-            <div>
-                <button type="submit" class="btn btn-primary "> envoyer </button>
-                </div>
-               </form>  
-            </div>
-        
-        </div>
-      </div>
-    </section> 
-
-
-        
-
-
-
-
-
-
-        
+    </div>
+  </div>
+</section>

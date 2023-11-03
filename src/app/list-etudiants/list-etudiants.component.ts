@@ -10,7 +10,7 @@ import { EtudEspService } from '../espace-etudiant/espEtud.service';
   styleUrls: ['./list-etudiants.component.css'],
 })
 export class ListEtudiantsComponent {
-  users: Etudiant[] = [];
+  users: any[] = [];
 
   constructor(
     private absenceService: AbsenceService,

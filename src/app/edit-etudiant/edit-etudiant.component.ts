@@ -6,35 +6,29 @@ import { EtudiantService } from '../service-etudiant/etudiant.service';
 @Component({
   selector: 'app-edit-etudiant',
   templateUrl: './edit-etudiant.component.html',
-  styleUrls: ['./edit-etudiant.component.css']
+  styleUrls: ['./edit-etudiant.component.css'],
 })
 export class EditEtudiantComponent implements OnInit {
   editEtudiantForm: any;
   id: any;
   etudiant: any = {};
-  constructor(private activatedRoute: ActivatedRoute,
+  constructor(
+    private activatedRoute: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private etudiantService : EtudiantService,
-    private router: Router) { }
-
-
+    private etudiantService: EtudiantService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    this.id=this.activatedRoute.snapshot.paramMap.get('id');
-    this.etudiantService.getEtudiantById(this.id).subscribe(
-      (data:any)=>{
-        this.etudiant=data;
-      }
-    )
+    this.id = this.activatedRoute.snapshot.paramMap.get('id');
+    this.etudiantService.getEtudiantById(this.id).subscribe((data: any) => {
+      this.etudiant = data;
+    });
   }
 
   editEtudiant() {
-    this.etudiantService.updateEtudiant(this.etudiant).subscribe(
-      () => {
-        this.router.navigate(['list-etudiants']);
-      }
-    );
-
+    this.etudiantService.updateEtudiant(this.etudiant).subscribe(() => {
+      this.router.navigate(['list-etudiants']);
+    });
   }
-
 }

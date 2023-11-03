@@ -1,7 +1,7 @@
 export class Etudiant {
   id!: Number;
 
-  Cin!: String;
+  cin!: String;
 
   nom!: String;
 
