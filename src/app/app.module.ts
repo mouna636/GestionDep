@@ -20,6 +20,7 @@ import { EspaceAdministrativeComponent } from './espace-administrative/espace-ad
 import { ListEnseignantsComponent } from './list-enseignants/list-enseignants.component';
 import { EditEnseignantComponent } from './edit-enseignant/EditEnseignantComponent.1';
 import { AddEnseignantComponent } from './add-enseignant/add-enseignant.component';
+import { BackButtonComponent } from './back-button/back-button.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { AddEnseignantComponent } from './add-enseignant/add-enseignant.componen
     EspaceAdministrativeComponent,
     ListEnseignantsComponent,
     EditEnseignantComponent,
-    AddEnseignantComponent
+    AddEnseignantComponent,
+    BackButtonComponent
   ],
   imports: [FormsModule,
     BrowserModule,
