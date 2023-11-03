@@ -8,16 +8,19 @@ import { ListAbsenceComponent } from './list-absence/list-absence.component';
 import { EspaceAdministrativeComponent } from './espace-administrative/espace-administrative.component';
 import { ListEnseignantsComponent } from './list-enseignants/list-enseignants.component';
 import { ListEtudiantsComponent } from './list-etudiants/list-etudiants.component';
+import { EnseignantTableComponent } from './enseignant-table/enseignant-table.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent },
   {path: 'addEnseignant', component: AddEnseignantComponent},
+  {path: 'enseignant-table',component:EnseignantTableComponent},
   {path: 'editEtudiant', component:EditEnseignantComponent },
    {path: 'ajout-etudiant', component: AjoutEtudiantComponent},
    { path: 'enseignants', component: ListAbsenceComponent },
   { path: 'administrative', component: EspaceAdministrativeComponent },
   { path: 'list-etudiants', component: ListEtudiantsComponent },
   
+  { path: 'editEnseignant', component:EditEnseignantComponent }
 ];
 
 

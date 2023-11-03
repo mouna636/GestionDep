@@ -1,0 +1,44 @@
+<div class="table-responsive">
+    <div class="table-wrapper">
+        <div class="table-title">
+          <h3>liste des enseignants</h3> 
+        </div>
+
+        <table class="table table-bordered">
+    <table class="table">
+        <thead>
+          <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Prenom</th>
+          <th scope="col">Email</th>
+          <th scope="col">Telephone</th>
+          <th scope="col">Sexe</th>
+          <th scope="col">Grade</th>
+          <th scope="col">Specialite</th>
+          <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+  
+          <tr *ngFor ='let e of enseignants'>
+          <th >{{e.id}}</th>
+          <td>{{e.nom}}</td>
+          <td>{{e.prenom}}</td>
+          <td>{{e.email}}</td>
+          <td>{{e.telephone}}</td>
+          <td>{{e.sexe}}</td>
+          <td>{{e.grade}}</td>
+          <td>{{e.specialite}}</td>
+          <td>
+            <button class="btn btn-primary" (click)='goToEdit(e.id)'>Edit</button>&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger" (click)='deleteEnseignant(e.id)'>Delete</button>
+          </td>
+         </tr>  
+        </tbody>
+        </table>
+     
+     
+ 
+
+
