@@ -8,11 +8,11 @@ import { Injectable } from "@angular/core";
 })
 export class EtudiantService {
 
-    etudiantUrl:string ='http://localhost:8080/etudiants'
+    etudiantUrl:string ='http://localhost:1500/etudiants'
 
     constructor(private httpClient:HttpClient) {}
 
-    getAllEtudiants(): any {    
+    getAllEtudiants(): any {
         return this.httpClient.get(this.etudiantUrl);
     }
 

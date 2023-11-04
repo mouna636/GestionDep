@@ -4,7 +4,7 @@ import { Etudiant } from '../models/etudiant.model';
 
 @Injectable()
 export class AbsenceService {
-  host: string = 'http://localhost:8080';
+  host: string = 'http://localhost:1500';
   constructor(private http: HttpClient) {}
 
   getEtudiants() {

@@ -25,6 +25,7 @@ import { ModifEnseignantComponent } from './modif-enseignant/modif-enseignant.co
 import { EditEtudiantComponent } from './edit-etudiant/edit-etudiant.component';
 import { EspaceEtudiantComponent } from './espace-etudiant/espace-etudiant.component';
 import { EtudEspService } from './espace-etudiant/espEtud.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { EtudEspService } from './espace-etudiant/espEtud.service';
     ModifEnseignantComponent,
     EditEtudiantComponent,
     EspaceEtudiantComponent,
+    DashboardComponent,
   ],
   imports: [
     FormsModule,

@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class AjoutService {
-  host: string = 'http://localhost:8080';
+  host: string = 'http://localhost:1500';
   constructor(private http: HttpClient) {}
 
   addEtudiant(etudiant: any) {

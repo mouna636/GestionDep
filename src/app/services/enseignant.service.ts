@@ -6,15 +6,15 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EnseignantService {
- 
-  enseignantUrl:string ='http://localhost:8080/enseignants'
+
+  enseignantUrl:string ='http://localhost:1500/enseignants'
 
   constructor(private httpClient:HttpClient) {}
-  
+
   getAllEnseignants(): Observable<any> {
     return this.httpClient.get(this.enseignantUrl);
   }
- 
+
 saveEnseignant(enseignant:any): Observable<any> {
   return this.httpClient.post(this.enseignantUrl,enseignant);
 }
@@ -27,5 +27,5 @@ getEnseignantById(id:any): Observable<any> {
  }
 deleteEnseignantById(id:any):Observable<any>{
   return this.httpClient.delete(`${this.enseignantUrl}/${id}`);
-} 
+}
  }

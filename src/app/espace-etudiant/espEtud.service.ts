@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class EtudEspService {
-  host: string = 'http://localhost:8080';
+  host: string = 'http://localhost:1500';
   constructor(private http: HttpClient) {}
 
   getNumberOfAbsencesByEtudiantId(id: number): any {
@@ -16,5 +16,8 @@ export class EtudEspService {
   }
   getTauxReussite(): any {
     return this.http.get(`${this.host}/etudiants/taux-reussite`);
+  }
+  etudiantDelete(id:any): Observable<any> {
+    return this.http.delete(`${this.host}/etudiants/deleteEtudiant/${id}`);
   }
 }

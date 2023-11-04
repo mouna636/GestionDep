@@ -35,4 +35,9 @@ export class ListEtudiantsComponent {
   goToEdit(x: any) {
     this.router.navigate([`editEtudiant/${x}`]);
   }
+  etudiantDelete(id:any){
+    this.etudesp.etudiantDelete(id).subscribe(res=>{
+
+    })
+  }
 }
